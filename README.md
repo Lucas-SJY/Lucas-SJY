@@ -23,12 +23,13 @@ Studying whether terminal agents can actually retrieve and use critical informat
 - Currently exploring **PPO-based optimization** and downstream agent evaluation
 - Planned submission to **AAAI 2027**
 
-### Adversarial Clarification Injection for Agentic LLMs
-Studying clarification responses as a new attack surface for LLM agents, particularly whether adversarial answers to an agent's own clarification questions can redirect downstream behavior.
+### Asking for Trouble: The Help Channel as an Injection Surface
+Studying replies to an agent’s own clarification questions as an attack surface for LLM agents, particularly how seemingly valid responses can steer subsequent help-seeking behavior and influence downstream actions.
 
-- Built a differential benchmark across office, coding, and tool-use environments
-- Evaluating multiple attack channels and failure modes
-- **Abstract submitted to ICLR 2027**
+- Built a controlled text-to-SQL benchmark where an adversary can modify only replies explicitly solicited by the agent
+- Showed that a single steering cue can change the agent’s next clarification question across eight LLMs
+- Evaluated injection guards and a verification-based defense that reduced attack success from 36% to 15%
+- **Manuscript under review at ICLR 2027**
 
 ## 🛠️ Systems Experience
 
@@ -49,7 +50,7 @@ Previously worked on production-oriented AI systems, including:
 
 ## 🧰 Tech
 
-**LLM / ML:** PyTorch, Transformers, SFT, PPO, RAG, GraphRAG  
+**LLM / ML:** PyTorch, Transformers, SFT, RLHF, RAG, GraphRAG  
 **Agents:** Tool Use, Dify, Agent Evaluation  
 **Systems:** Python, SQL, Linux, Docker, Kubernetes, AWS S3  
 **Other:** CUDA C/C++, Computer Vision
